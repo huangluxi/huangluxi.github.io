@@ -570,7 +570,7 @@ body {
   text-decoration: none;
   background: none;
   display: flex;
-  align-item: center;
+  align-items: center;
 }
 #header #logo {
   display: inline-block;
