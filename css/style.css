@@ -569,8 +569,6 @@ body {
   color: inherit;
   text-decoration: none;
   background: none;
-  display: flex;
-  align-items: center;
 }
 #header #logo {
   display: inline-block;
