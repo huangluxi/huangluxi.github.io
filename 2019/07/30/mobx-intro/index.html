@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 简单、可扩">
+<meta name="keywords" content="Mobx,React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mobx介绍">
 <meta property="og:url" content="https://huangluxi.github.io/2019/07/30/mobx-intro/index.html">
 <meta property="og:site_name" content="HuangLuxi Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 简单、可扩">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-30T14:54:47.197Z">
+<meta property="og:image" content="https://huangluxi.github.io/2019/07/30/images/flow.png">
+<meta property="og:updated_time" content="2019-07-31T13:50:05.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mobx介绍">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 简单、可扩">
+<meta name="twitter:image" content="https://huangluxi.github.io/2019/07/30/images/flow.png">
     
     
         
@@ -114,6 +117,11 @@
 
 
       
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Mobx/">Mobx</a>, <a class="tag-link" href="/tags/React/">React</a>
+    </div>
+
 
     </div>
   </header>
@@ -121,6 +129,12 @@
 
   <div class="content" itemprop="articleBody">
     <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>简单、可扩展的状态管理</p>
+<p><img src="../images/flow.png" alt></p>
+<p>对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。</p>
+<p>它由几个部分组成：Actions、State、Computed Values、Reactions</p>
+<p>在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的 State 中的数据计算出所需要的计算属性（computed values）值，最后响应（react）到 UI 视图层。</p>
+<p>Mobx的核心原理是通过action触发state的变化，进而触发state的衍生对象（computed value &amp; Reactions）。</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
