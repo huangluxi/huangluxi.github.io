@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="简单、可扩展的状态管理  对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。 它由几个部分组成：Actions、State、Computed Values、Reactions 在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的">
+    <meta name="description" content="简单、可扩展的状态管理 对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。  它由几个部分组成：Actions、State、Computed Values、Reactions 在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的">
 <meta name="keywords" content="Mobx,React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mobx介绍">
 <meta property="og:url" content="https://huangluxi.github.io/2019/07/30/mobx-intro/index.html">
 <meta property="og:site_name" content="HuangLuxi Blog">
-<meta property="og:description" content="简单、可扩展的状态管理  对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。 它由几个部分组成：Actions、State、Computed Values、Reactions 在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的">
+<meta property="og:description" content="简单、可扩展的状态管理 对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。  它由几个部分组成：Actions、State、Computed Values、Reactions 在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://huangluxi.github.io/images/flow.png">
-<meta property="og:updated_time" content="2019-07-31T15:30:33.191Z">
+<meta property="og:updated_time" content="2019-08-01T12:29:21.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mobx介绍">
-<meta name="twitter:description" content="简单、可扩展的状态管理  对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。 它由几个部分组成：Actions、State、Computed Values、Reactions 在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的">
+<meta name="twitter:description" content="简单、可扩展的状态管理 对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。  它由几个部分组成：Actions、State、Computed Values、Reactions 在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的">
 <meta name="twitter:image" content="https://huangluxi.github.io/images/flow.png">
     
     
@@ -129,8 +129,8 @@
 
   <div class="content" itemprop="articleBody">
     <p>简单、可扩展的状态管理</p>
-<p><img src="/images/flow.png" alt></p>
 <p>对于 MobX 来说，它的数据流简明清晰，并且也是单向数据流，如下图所示。</p>
+<p><img src="/images/flow.png" alt></p>
 <p>它由几个部分组成：Actions、State、Computed Values、Reactions</p>
 <p>在整个数据流中，通过事件驱动（UI 事件、网络请求…）触发 Actions，在 Actions 中修改了 State 中的值，这里的 State 既应用中的 store 树（存储数据），然后根据新的 State 中的数据计算出所需要的计算属性（computed values）值，最后响应（react）到 UI 视图层。</p>
 <p>Mobx的核心原理是通过action触发state的变化，进而触发state的衍生对象（computed value &amp; Reactions）。</p>
